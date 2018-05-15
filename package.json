@@ -1,0 +1,34 @@
+{
+  "name": "veterinaria_junior",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest",
+    "emulator": "start cmd /k \"C:\\Data\\Software\\Android\\emulator\\emulator.exe -avd Nexus_4_API_23\"",
+    "release": "start cmd /k \"cd android && gradlew clean && gradlew assembleRelease\"",
+    "debug": "start cmd /k \"cd android && gradlew clean && gradlew assembleDebug\"",
+    "install": "start cmd /k \"cd android && gradlew clean && gradlew installDebug\""
+  },
+  "dependencies": {
+    "react": "16.3.1",
+    "react-native": "0.55.4",
+    "react-native-animatable": "^1.2.4",
+    "react-native-calendars": "^1.19.3",
+    "react-native-device-info": "^0.21.5",
+    "react-native-image-picker": "^0.26.10",
+    "react-native-linear-gradient": "^2.4.0",
+    "react-native-material-textfield": "^0.12.0",
+    "react-native-navigation": "^1.1.457",
+    "react-native-platform-touchable": "^1.1.1"
+  },
+  "devDependencies": {
+    "babel-jest": "22.4.3",
+    "babel-preset-react-native": "4.0.0",
+    "jest": "22.4.3",
+    "react-test-renderer": "16.3.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}

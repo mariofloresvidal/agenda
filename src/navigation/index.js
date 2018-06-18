@@ -9,9 +9,8 @@ import {
     Components_Activity,
     Login_Activity,
     Home_Activity,
-    Dispositivos_Activity,
-    Contratos_Activity,
-    ReporteCorrectivo_Activity
+    DetallesCita_Activity,
+    FormularioCita_Activity
 } from '../activities'
 
 /**
@@ -22,9 +21,8 @@ export default () => {
     registerComponent(`components.index`, Components_Activity);
     registerComponent(`login.index`, Login_Activity);
     registerComponent(`home.index`, Home_Activity);
-    registerComponent(`dispositivos.index`, Dispositivos_Activity);
-    registerComponent(`contratos.index`, Contratos_Activity);
-    registerComponent(`correctivo.index`, ReporteCorrectivo_Activity);
+    registerComponent(`detalles.cita.index`, DetallesCita_Activity);
+    registerComponent(`formulario.cita.index`, FormularioCita_Activity);
 }
 
 /**

@@ -16,14 +16,14 @@ export const Colors = {
         }
     },
     primary: {
-        color: '#4CAF50',
-        light: '#C8E6C9',
-        dark: '#388E3C',
+        color: '#0277bd',
+        light: '#58a5f0',
+        dark: '#004c8c',
     },
     secondary: {
-        color: '#0176c3',
-        light: '#5aa4f6',
-        dark: '#004b92',
+        color: '#37474f',
+        light: '#62727b',
+        dark: '#102027',
     },
     screen: {
         dark: '#373A3F',

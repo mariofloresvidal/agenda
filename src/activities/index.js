@@ -5,3 +5,6 @@
 export * from './TemplateActivity'
 export * from './ComponentsActivity'
 export * from './LoginActivity'
+export * from './HomeActivity'
+export * from './DetallesCitaActivity'
+export * from './FormularioCitaActivity'

@@ -11,6 +11,7 @@
     "install": "start cmd /k \"cd android && gradlew clean && gradlew installDebug\""
   },
   "dependencies": {
+    "moment": "^2.22.1",
     "react": "16.3.1",
     "react-native": "0.55.4",
     "react-native-animatable": "^1.2.4",

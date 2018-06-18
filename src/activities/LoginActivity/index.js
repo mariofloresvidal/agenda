@@ -48,87 +48,71 @@ class LoginActivity extends React.Component<Props, State> {
         return (
             <View style={{
                 flex: 1,
+                justifyContent: 'center',
+                alignItems: 'center',
+                backgroundColor: Colors.secondary.color
             }}>
-                <LinearGradient
+                <View
                     style={{
-                        flex: 1,
-                        justifyContent: 'center',
-                        alignItems: 'center'
+                        width: '80%',
+                        backgroundColor: 'white',
+                        padding: Pixel.toDp(15),
+                        shadowColor: '#000',
+                        shadowOffset: { width: 0, height: 2 },
+                        shadowOpacity: 0.8,
+                        shadowRadius: 2,
+                        elevation: 2,
                     }}
-                    start={{
-                        x: 0.0,
-                        y: 0.25
-                    }}
-                    end={{
-                        x: 0.5,
-                        y: 1.0
-                    }}
-                    colors={[
-                        '#0176C3', '#FAFAFA', '#4CAF50'
-                    ]}
                 >
-                    <View
-                        style={{
-                            width: '80%',
-                            backgroundColor: 'white',
-                            padding: Pixel.toDp(15),
-                            shadowColor: '#000',
-                            shadowOffset: { width: 0, height: 2 },
-                            shadowOpacity: 0.8,
-                            shadowRadius: 2,
-                            elevation: 2,
-                        }}
-                    >
-                        <View style={{ alignItems: 'center' }}>
-                            <Image
-                                style={{
-                                    width: 120,
-                                    height: 120,
-                                }}
-                                source={Icons.Logo}
-                            />
-                        </View>
-                        <Animatable.View
-                            animation="fadeInDown"
-                            delay={500}
-                        >
-
-                            <TextField
-                                ref={(ref) => { this.usernameInput = ref }}
-                                onEndEditing={() => {
-                                    this.passwordInput.focus()
-                                }}
-                                tintColor={Colors.primary.color}
-                                label='Usuario'
-                                value={username}
-                                error={usernameError}
-                                returnKeyType={'next'}
-                                onChangeText={(username) => this.setState({ username })}
-                            />
-                            <TextField
-                                ref={(ref) => { this.passwordInput = ref }}
-                                secureTextEntry={true}
-                                tintColor={Colors.primary.color}
-                                label='Contrase;a'
-                                value={password}
-                                error={passwordError}
-                                onChangeText={(password) => this.setState({ password })}
-                                onSubmitEditing={() => {
-                                    this.onSubmit()
-                                }}
-                            />
-                            <View style={{ height: Pixel.toDp(15) }} />
-                            <Button
-                                secondary
-                                loading={loading}
-                                title={'Iniciar Sesion'}
-                                onPress={() => {
-                                    this.onSubmit()
-                                }}
-                            />
-                        </Animatable.View>
+                    <View style={{ alignItems: 'center' }}>
+                        <Image
+                            style={{
+                                width: 120,
+                                height: 120,
+                            }}
+                            source={Icons.Perro}
+                        />
                     </View>
-                </LinearGradient>
+                    <Animatable.View
+                        animation="fadeInDown"
+                        delay={500}
+                    >
+
+                        <TextField
+                            ref={(ref) => { this.usernameInput = ref }}
+                            onEndEditing={() => {
+                                this.passwordInput.focus()
+                            }}
+                            tintColor={Colors.primary.color}
+                            label='Usuario'
+                            value={username}
+                            error={usernameError}
+                            returnKeyType={'next'}
+                            onChangeText={(username) => this.setState({ username })}
+                        />
+                        <TextField
+                            ref={(ref) => { this.passwordInput = ref }}
+                            secureTextEntry={true}
+                            tintColor={Colors.primary.color}
+                            label='Contrase;a'
+                            value={password}
+                            error={passwordError}
+                            onChangeText={(password) => this.setState({ password })}
+                            onSubmitEditing={() => {
+                                this.onSubmit()
+                            }}
+                        />
+                        <View style={{ height: Pixel.toDp(15) }} />
+                        <Button
+                            secondary
+                            loading={loading}
+                            title={'Iniciar Sesion'}
+                            onPress={() => {
+                                this.onSubmit()
+                            }}
+                        />
+                    </Animatable.View>
+                </View>
             </View>
         )
     }
@@ -164,7 +148,7 @@ class LoginActivity extends React.Component<Props, State> {
         setTimeout(() => {
             this.setState({ loading: false })
             this.props.navigator.resetTo({
-                screen: 'components.index'
+                screen: 'home.index'
             })
         }, 2000)
     }

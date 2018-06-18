@@ -32,7 +32,6 @@ export default () => {
          * Actividad inicial
          */
         screen: {
-            title: 'Login',
             screen: 'login.index',
         },
         /**

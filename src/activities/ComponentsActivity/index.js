@@ -2,7 +2,8 @@
 import React from 'react'
 
 // components
-import { View } from 'react-native'
+import { View, Image } from 'react-native'
+
 import { Text, Screen, Button, List, Subtitle, ImagePicker } from '../../components'
 
 // assets
@@ -61,6 +62,9 @@ class ComponentsActivity extends React.Component<Props, State> {
     render() {
         return (
             <Screen>
+                <Image source={Icons.Perro} />
+
+
                 <Text center bold size={18}>{'<Button />'}</Text>
                 <Button
                     title={'Default'}
@@ -85,10 +89,10 @@ class ComponentsActivity extends React.Component<Props, State> {
                 <Button secondary />
 
                 <Text center bold size={18}>{'<Button.Icon />'}</Text>
-                <Button.Icon secondary icon={Icons.Contratos} />
+                <Button.Icon secondary icon={Icons.Perro} />
                 <Button.Icon bgColor={'white'} icon={Icons.Contratos} />
                 <Button.Icon secondary medium loading icon={Icons.Contratos} />
-                <Button.Icon secondary large icon={Icons.Contratos} />
+                <Button.Icon secondary large icon={Icons.Perro} />
 
                 <Text center bold size={18}>{'<Button.Inline />'}</Text>
                 <Button.Inline>
